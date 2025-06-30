@@ -1,5 +1,5 @@
 {
-  "name": "playwright",
+  "name": "exam_3_playwright",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,10 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.53.0",
-    "@types/node": "^24.0.0"
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.7"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.0"
   }
 }
