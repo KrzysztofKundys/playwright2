@@ -1,7 +1,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 // import { MainPage } from '../pages/main-page';
-import { NewHome } from '../pages/new-home';
+import { NewHome } from '../../pages/new-home';
 
 test.describe('navigation items - categories', () => {
 
