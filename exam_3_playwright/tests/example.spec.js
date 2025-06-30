@@ -9,6 +9,11 @@ test('log in to page', async ({ page }) => {
 
   await page.goto('/login');
 
+   if (process.env.SHOWGPDR === 'true') {
+    await gdpr.acceptCookies();
+    
+  }
+
   await gdpr.acceptCookies();
 
   await login.loginCredential(process.env.EMAIL, process.env.PASSWORD);

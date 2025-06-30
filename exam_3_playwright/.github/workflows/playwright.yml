@@ -12,6 +12,7 @@ jobs:
       EMAIL: ${{ secrets.EMAIL }}
       PASSWORD: ${{ secrets.PASSWORD }}
       TESTUSER: ${{ secrets.TESTUSER }}
+      SHOWGDPR: ${{ vars.SHOWGDPR }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
