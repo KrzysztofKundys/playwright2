@@ -1,19 +1,16 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
+import { Gdpr } from '../gdpr/gdpr.js';
+import { Login } from '../login/login.js';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('log in to page', async ({ page }) => {
+  const gdpr = new Gdpr(page);
+  const login = new Login(page);
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+  await page.goto('/login');
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+  await gdpr.acceptCookies();
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  await login.loginCredential(process.env.EMAIL, process.env.PASSWORD);
+  await expect(page.getByText('Logged in as ${process.env.TESTUSER}).toBeVisible();
 });
