@@ -19,8 +19,8 @@ class Login {
         await this.page.locator(this.loginButton).click();
     }
 
-    async loginCredential() {
-        await this.page.fillLoginForm(email, password);
+    async loginCredential(email, password) {
+        await this.fillLoginForm(email, password);
         await this.clickLoginButton();
     }
 }

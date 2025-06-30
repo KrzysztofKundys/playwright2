@@ -9,9 +9,9 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
-    EMAIL: ${{ secrets.pwrxncoqrfumdocfwd@nespj.com }}
-    PASSWORD: ${{ secrets.Testy123! }}
-    TESTUSER: ${{ secrets.KrzysztofKundys }}
+      EMAIL: ${{ secrets.EMAIL }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+      TESTUSER: ${{ secrets.TESTUSER }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4

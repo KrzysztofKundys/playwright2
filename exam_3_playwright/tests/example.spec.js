@@ -12,5 +12,5 @@ test('log in to page', async ({ page }) => {
   await gdpr.acceptCookies();
 
   await login.loginCredential(process.env.EMAIL, process.env.PASSWORD);
-  await expect(page.getByText('Logged in as ${process.env.TESTUSER}).toBeVisible();
+  await expect(page.getByText(`Logged in as ${process.env.TESTUSER}`)).toBeVisible();
 });
